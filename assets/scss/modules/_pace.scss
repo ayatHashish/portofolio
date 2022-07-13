@@ -1,0 +1,53 @@
+﻿.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.pace.pace-inactive .pace-progress {
+    display: none;
+}
+
+.pace .pace-progress {
+    position: fixed;
+    z-index: 2000;
+    top: 50%;
+    right: 50%;
+    height: 2rem;
+    width: 2rem;
+    transform: translate3d(50%, -50%, 0) !important;
+  
+}
+
+.pace .pace-progress:before {
+    content: "" !important;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%) !important;
+    width: 150px;
+    height: 127px;
+   /*  background-image: url("#{$img}/preloader.gif"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+
+.pace .pace-progress.show-percentage:after {
+    display: block;
+    position: absolute;
+    right: .5rem;
+    content: attr(data-progress-text);
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1;
+    text-align: right;
+    top: 95px;
+    right: 50%;
+    transform: translate(50%, -50%) !important;
+    color: $brand-primary;
+}
